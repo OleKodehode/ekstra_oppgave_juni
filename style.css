@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* light/darkmode variabler */
+body.light-mode {
+  --text-color: #000;
+  --background-color: #f0f0f0;
+  --search-bar: #e4e3e3;
+}
+
+body.dark-mode {
+  --text-color: #fff;
+  --background-color: #141e20;
+  --search-bar: #23373b;
+}
+
+/* Kjapp og enkel vei å gjøre svg bilder hvit */
+body.dark-mode #nav_buttons,
+body.dark-mode #search_icon {
+  filter: invert();
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+p,
+a,
+input {
+  color: var(--text-color);
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2svh 5svw;
+}
+
+#left_header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 2svw;
+}
+
+h1 {
+  color: var(--text-color);
+  float: right;
+  margin-top: 15%;
+  margin-left: 0.2em;
+}
+
+li {
+  display: inline;
+  font-size: 1.25em;
+  margin-left: 10px;
+}
+
+li > a {
+  text-decoration: none;
+}
+
+li > a:hover {
+  text-decoration: underline;
+}
+
+#right_header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+#nav_buttons {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+#nav_buttons > button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#search_bar {
+  background-color: var(--search-bar);
+  padding: 1.5svh 1svw;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+}
+
+#search_bar input,
+input:focus {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2em;
+  outline: none;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  max-width: 80svw;
+}
+#big_article {
+  background-image: url(./img/big_article_pic.jpg);
+  width: 100%;
+}
