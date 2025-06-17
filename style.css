@@ -107,14 +107,14 @@ input:focus {
 main {
   display: grid;
   margin: 2svh auto;
-  gap: 20px;
   min-height: 100svh;
   max-width: 80svw;
+  row-gap: 2svh;
 }
 
 .big_article_container {
   grid-column: 1 / span 2;
-  grid-row: 1 / span 3;
+  grid-row: 1 / span 4;
   height: 100%;
   width: 100%;
 }
@@ -146,5 +146,28 @@ p {
 
 .big_article_subtext {
   font-size: 24px;
+  font-style: italic;
+}
+
+main > a,
+.small_article > p {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.small_article {
+  justify-self: center;
+}
+
+.small_article_headline {
+  margin: 0.3em 0;
+  padding: 0 1em;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.small_article_subtext {
+  padding: 0.5em 2em 0 2em;
+  font-size: 18px;
   font-style: italic;
 }
