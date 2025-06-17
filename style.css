@@ -155,8 +155,8 @@ p {
   height: 50svh;
 }
 
-.small_article_container > p,
-a {
+.small_article_container a,
+.small_article_container p {
   text-decoration: none;
   color: var(--text-color);
 }
